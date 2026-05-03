@@ -2,7 +2,8 @@ from flask import Flask, request, jsonify, send_from_directory
 from openai import OpenAI
 import os
 
-app = Flask(__name__, static_folder='static')
+app = app = Flask(__name__, static_folder='static', static_url_path='')
+
 
 client = OpenAI(
     base_url="https://openrouter.ai/api/v1",
@@ -35,7 +36,8 @@ def is_safe(text):
 
 @app.route('/')
 def index():
-    return send_from_directory('static', 'index.html')
+return app.send_static_file('index.html')
+
 
 @app.route('/chat', methods=['POST'])
 def chat():
