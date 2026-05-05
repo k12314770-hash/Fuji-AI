@@ -36,8 +36,7 @@ def is_safe(text):
 
 @app.route('/')
 def index():
-    return app.send_static_file('index.html')
-
+    return open('static/index.html').read()
 
 @app.route('/chat', methods=['POST'])
 def chat():
