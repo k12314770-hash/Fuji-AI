@@ -36,7 +36,13 @@ def is_safe(text):
 
 @app.route('/')
 def index():
-    return open('static/index.html').read()
+    return """<!DOCTYPE html>
+<html>
+<head><title>Fuji AI</title></head>
+<body>
+<h1>Fuji AI is working!</h1>
+</body>
+</html>"""
 
 @app.route('/chat', methods=['POST'])
 def chat():
