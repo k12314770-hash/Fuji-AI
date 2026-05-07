@@ -36,7 +36,7 @@ def is_safe(text):
 
 @app.route('/')
 def index():
-    return """<!DOCTYPE html>
+    return '''<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -148,8 +148,7 @@ def index():
   }
 </script>
 </body>
-</html>
-"""
+</html>'''
 
 @app.route('/chat', methods=['POST'])
 def chat():
