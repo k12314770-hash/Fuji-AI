@@ -148,7 +148,8 @@ def index():
   }
 </script>
 </body>
-</html>'''
+</html>
+'''
 
 @app.route('/chat', methods=['POST'])
 def chat():
